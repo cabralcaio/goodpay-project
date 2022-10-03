@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Goodpay</title>
-    <link rel="shortcut icon" href="img/logo/GoodPay.png" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" href="./img/logo/GoodPay.png" type="image/x-icon">
   </head>
   <body>
     <header>
@@ -82,6 +82,7 @@
                           >Login</span
                         >
                         <input
+                          id="login"
                           type="text"
                           class="form-control"
                           aria-label="Sizing example input"
@@ -93,6 +94,7 @@
                           >Senha</span
                         >
                         <input
+                          id="senha"
                           type="password"
                           class="form-control"
                           aria-label="Sizing example input"
@@ -100,8 +102,12 @@
                         />
                       </div>
                       <div class="d-grid gap-2">
-                        <button class="btn btn-outline-success" type="button">Entrar</button>
-                        <button class="btn btn-outline-dark" type="button">Cadastrar</button>
+                        <button id="btnEntrar" class="btn btn-outline-success" type="button">
+                          Entrar
+                        </button>
+                        <button class="btn btn-outline-dark" type="button">
+                          Cadastrar
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -193,9 +199,10 @@
         </div>
       </nav>
     </header>
+
     <main class="mt-5">
       <div class="container">
-      <div
+        <div
           id="carouselExampleControls"
           class="carousel slide"
           data-bs-ride="carousel"
@@ -293,72 +300,94 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
+
         <div class="card-group">
           <div class="card">
-            <img src="img/quadrado/1.png" class="card-img-top" alt="Imagem Grupo Card">
+            <img
+              src="img/quadrado/1.png"
+              class="card-img-top"
+              alt="Imagem Grupo Card"
+            />
             <div class="card-body">
               <h5 class="card-title">Planejamento</h5>
               <p class="card-text">
-                Faça seu dinheiro render utilizando os 
-                sistemas de investimento do GoodPay.
+                Faça seu dinheiro render utilizando os sistemas de investimento
+                do GoodPay.
               </p>
-              <p class="card-text"><small class="text-muted">07 de julho 2022</small></p>
+              <p class="card-text">
+                <small class="text-muted">07 de julho 2022</small>
+              </p>
             </div>
           </div>
-
           <div class="card">
-            <img src="img/quadrado/2.png" class="card-img-top" alt="Imagem Grupo Card">
+            <img
+              src="img/quadrado/2.png"
+              class="card-img-top"
+              alt="Imagem Grupo Card"
+            />
             <div class="card-body">
               <h5 class="card-title">GP no Bolso</h5>
               <p class="card-text">
-                Com o App do GoodPay você acompanha seu porquinho 
-                de qualquer lugar.
+                Com o App do GoodPay você acompanha seu porquinho de qualquer
+                lugar.
               </p>
-              <p class="card-text"><small class="text-muted">07 de julho 2022</small></p>
+              <p class="card-text">
+                <small class="text-muted">07 de julho 2022</small>
+              </p>
             </div>
           </div>
-
           <div class="card">
-            <img src="img/quadrado/3.png" class="card-img-top" alt="Imagem Grupo Card">
+            <img
+              src="img/quadrado/3.png"
+              class="card-img-top"
+              alt="Imagem Grupo Card"
+            />
             <div class="card-body">
               <h5 class="card-title">Gaste Bem</h5>
               <p class="card-text">
-                Planejar e gastar bem são os segredos de quem deseja 
-                um investimento futuro e sua segurança financeira.
+                Planejar e gastar bem são os segredos de quem deseja um
+                investimento futuro e sua segurança financeira.
               </p>
-              <p class="card-text"><small class="text-muted">07 de julho 2022</small></p>
+              <p class="card-text">
+                <small class="text-muted">07 de julho 2022</small>
+              </p>
             </div>
           </div>
-
         </div>
       </div>
     </main>
 
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+    <div
+      class="modal fade"
+      id="alertaLogin"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Erro de login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Um erro aconteceu</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Fechar</button>
           </div>
         </div>
       </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
-
-    <script src="js/index.js" type="module"></script>
-
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>
