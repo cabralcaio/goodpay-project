@@ -1,30 +1,37 @@
 const usuarios = [
-    {
-        id: 1,
-        nomeUsuario: "caiocabral",
-        senha: "1234",
-        email: "caio@hotmail.com"
-    },
-    {
-        id: 2,
-        nomeUsuario: "jose-almir",
-        senha: "1234",
-        email: "jose@hotmail.com"
-    },
-    {
-        id: 3,
-        nomeUsuario: "renato",
-        senha: "1234",
-        email: "renato@hotmail.com"
-    },
-    {
-        id: 4,
-        nomeUsuario: "leticiacabral",
-        senha: "1234",
-        email: "caio@hotmail.com"
-    }
-]
+  {
+    id: 1,
+    nomeUsuario: "batata",
+    senha: "12345",
+    email: "jose.almir@soulcodeacademy.org",
+  },
+  {
+    id: 2,
+    nomeUsuario: "renato3x",
+    senha: "12345",
+    email: "renato.pereira@gmail.com",
+  },
+  {
+    id: 3,
+    nomeUsuario: "bruno-dias",
+    senha: "12345",
+    email: "brunos.dias@gmail.com",
+  },
+  {
+    id: 4,
+    nomeUsuario: "pedro-viana",
+    senha: "12345",
+    email: "pedro.viana@gmail.com",
+  },
+  {
+    id: 1,
+    nomeUsuario: "batatinha123",
+    senha: "12345",
+    email: "jose.almir@soulcodeacademy.org",
+  }
+];
 
 export default usuarios;
-
-//disponibiliza o array  para ser utilizado fora do arquivo moduloDados.js
+/**
+ * Disponibiliza o array para ser utilizado fora do arquivo moduloDados.js
+ */
